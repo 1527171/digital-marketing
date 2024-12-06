@@ -231,7 +231,6 @@ project/
 │       └── traffic_score_calculator.py      # 流量值分数计算模块
 │
 ├── requirements.txt                     # 项目依赖
-└── main.py                              # 主程序入口
 ```
 
 ---
