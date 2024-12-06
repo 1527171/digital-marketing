@@ -230,7 +230,7 @@ project/
 │       ├── __init__.py                      # 包初始化文件
 │       └── traffic_score_calculator.py      # 流量值分数计算模块
 │
-├── requirements.txt                     # 项目依赖
+└── requirements.txt                     # 项目依赖
 ```
 
 ---
