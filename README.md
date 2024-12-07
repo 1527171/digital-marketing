@@ -218,7 +218,8 @@ Git 提示冲突时，你需要手动解决冲突，参见**解决冲突步骤**
 project/
 ├── data/                                # 数据目录
 │   ├── raw/                             # 原始数据
-│   └── processed/                       # 处理后的数据
+│   ├── processed/                       # 处理后的数据
+│   └── result/                          # 推荐结果
 ├── src/                                 # 核心代码目录
 │   ├── aggregated_keywords
 │   │   ├── __init__.py                      # 包初始化文件
@@ -226,9 +227,9 @@ project/
 │   │   ├── data_processing.py               # 数据加载与预处理模块
 │   │   └── aggregation.py                   # 数据聚合模块
 │   │
-│   └── score_calculator
+│   └── recommender
 │       ├── __init__.py                      # 包初始化文件
-│       └── traffic_score_calculator.py      # 流量值分数计算模块
+│       └── recommender.py                   # 推荐算法模块
 │
 └── requirements.txt                     # 项目依赖
 ```
