@@ -13,7 +13,7 @@ class DataProcessor:
 
     def preprocess_data(self, df):
         # 选择需要的字段
-        df = df[['商品标题', '商品一级类目名称', '支付金额（元）']]
+        df = df[['用户账号（ID）','访问次数（次）','访问时长（时）','商品介绍','商品ID']]
         # 处理空值
         df.dropna()
         return df
