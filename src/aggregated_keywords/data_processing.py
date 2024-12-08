@@ -9,7 +9,7 @@ class DataProcessor:
         self.file_path = file_path
 
     def load_data(self):
-        return pd.read_excel(self.file_path)
+        return pd.read_csv(self.file_path)
 
     def preprocess_data(self, df):
         # 选择需要的字段

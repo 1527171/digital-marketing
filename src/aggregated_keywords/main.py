@@ -7,7 +7,7 @@ from pathlib import Path
 def main():
     # 文件路径
     base_dir = Path(__file__).resolve().parent.parent.parent  # 定位到项目的根目录
-    raw_data_path = base_dir / "data" / "raw" / "result_new.xlsx"
+    raw_data_path = base_dir / "data" / "processed" / "user_product_allocation.csv"
     result_path = base_dir / "data" / "processed" / "aggregated_keywords.csv"
     stop_words_path = "stopwords.txt"
 

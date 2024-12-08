@@ -32,8 +32,8 @@ def get_id(path, user_id, recommendations):
     :param recommendations: 推荐的商品 ID 列表
     :return: 包含用户账号、商品介绍和商品 ID 的列表
     """
-    # 读取 result_new.xlsx 数据
-    df = pd.read_excel(path)
+    # 读取数据
+    df = pd.read_csv(path)
 
     # 查找用户的推荐商品信息
     user_recommendations = []
@@ -42,6 +42,8 @@ def get_id(path, user_id, recommendations):
         if not match.empty:
             user_recommendations.append({
                 "用户账号（ID）": user_id,
+                "商品名称": match['商品名称'].iloc[0],
+                "商品类型": match['商品类型'].iloc[0],
                 "商品介绍": match['商品介绍'].iloc[0],
                 "商品ID": item_id
             })
@@ -51,7 +53,7 @@ def get_id(path, user_id, recommendations):
 def main():
     base_dir = Path(__file__).resolve().parent.parent.parent  # 定位到项目的根目录
     processed_path = base_dir / "data" / "processed" / "aggregated_keywords.csv"
-    result_new_path = base_dir / "data" / "raw" / "result_new.xlsx"
+    result_new_path = base_dir / "data" / "processed" / "user_product_allocation.csv"
 
     # 读取处理后的数据
     aggregated_df = pd.read_csv(processed_path)
